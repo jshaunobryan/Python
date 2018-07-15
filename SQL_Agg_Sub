@@ -1,0 +1,8 @@
+SELECT department, gender, salary
+FROM emps
+WHERE gender = 'Female'
+AND start_date IN (
+    	SELECT MAX(start_date)
+    	FROM emps
+    	GROUP BY department, gender
+		ORDER BY MAX(start_date) DESC);
