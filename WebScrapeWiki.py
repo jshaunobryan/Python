@@ -1,5 +1,5 @@
 # This script looks at a webpage with search results, copies the source
-# code, writes it to a text file, and then looks for elemets within the HTML
+# code, writes it to a text file, and then looks for elements within the HTML
 # with a designated tag and returns the contents to a formatted spreadsheet
 
 #import modules
@@ -53,10 +53,11 @@ for letter in SrLst:
 		x = soup.select_one("span[class='geo']") # These are where the coordinates are stored
 		crdLst.append(x)
 
+# write results to text
 z = zip(comLst, crdLst)
 for i in z:
 	f.write(str(i) + "\n")
 f.close()
 
-print "Done sucka!"
+print "Done!"
 

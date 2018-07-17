@@ -55,7 +55,6 @@ res = soup.text
 x = res.replace('\\n','|')
 y = x.replace('Check Box','*')
 records = y
-print "hey"
 records = records[1:]
 records = records[:-1]
 records = records.split("*")
@@ -63,5 +62,5 @@ for rec in records:
 	f1.write(rec + "\n")
 f1.close()
 
-print "Done sucka!"
+print "Done!"
 
