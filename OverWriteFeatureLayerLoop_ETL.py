@@ -1,3 +1,7 @@
+# This script uses an ArcGIS Pro project to loop through mp objects and overwrite ArcGIS Online services sharing the same name
+# in their service definition files
+
+# import modules
 import arcpy
 import os, sys, json, urllib.request
 from arcgis.gis import GIS
